@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test":  "echo \"No test specified\""
+    "test": "echo \"No test specified\""
   },
   "keywords": [
     "convertir",
