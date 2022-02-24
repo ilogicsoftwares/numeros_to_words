@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["convertir", "letras","numeros","numeros a letras", "convertir numeros a letras"],
+  "author": "Richard Aguirre",
   "license": "ISC"
 }
