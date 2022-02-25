@@ -24,6 +24,7 @@
 // 
 // @author Rodolfo Carmona
 // @contributor Jean (jpbadoino@gmail.com)
+// @Modified by Richard Jesus Aguirre Perez (richardjap@gmail.com)
 /*************************************************************/
 var config = {
     
@@ -91,6 +92,13 @@ config.letrasMonedaSingular=singular;
 }
 export function setPlural(plural){
 config.letrasMonedaPlural=plural;
+}
+
+export function setCentsSingular(singular){
+    config.letrasMonedaCentavoPlural=singular;
+}
+export function setCentsPlural(plural){
+    config.letrasMonedaCentavoPlural=plural;
 }
 
 export function getSingular(){
@@ -191,9 +199,9 @@ export function NumeroALetras(num) {
     if (data.centavos > 0) {
         data.letrasCentavos = "CON " + (function (){
             if (data.centavos == 1)
-            return Millones(data.centavos) + " " + data.letrasCentavos ;
+            return Millones(data.centavos) + " " + config.letrasMonedaCentavoSingular ;
             else
-            return Millones(data.centavos) + " "  + data.letrasCentavos ;
+            return Millones(data.centavos) + " "  + config.letrasMonedaCentavoPlural; ;
             })();
     };
 

@@ -2,7 +2,9 @@ import {
     NumeroALetras,
     setSingular,
     setPlural,
-    getSingular
+    getSingular,
+    setCentsPlural,
+    setCentsSingular
 } from './numero_to_word/index.js';
 
 //craate module with static class named numero_to_word with export default NumeroALetras
@@ -34,6 +36,18 @@ var numero_to_word = function (num = null) {
             _setPlural: function (plural) {
                 setPlural(plural);
             },
+            _setCentsSingular: function (singular) {
+                setCentsSingular(singular);
+            },
+            _setCentsPlural: function (plural) {
+                setCentsPlural(plural);
+            }
+        },
+        clearConfig: function () {
+            setSingular('');
+            setPlural('');
+            setCentsSingular('');
+            setCentsPlural('');
         },
         toString: function () { //resulted 
 
