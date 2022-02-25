@@ -1,37 +1,51 @@
-import {NumeroALetras} from './numero_to_word/index.js';
+import {
+    NumeroALetras,
+    setSingular,
+    setPlural,
+    getSingular
+} from './numero_to_word/index.js';
 
 //craate module with static class named numero_to_word with export default NumeroALetras
 
-var _value=null;
 
 
-let numero_to_word={
-      toWords:function(num){
-        let data = NumeroALetras(num).trim();
-        _value=data;
-        return this; 
+var numero_to_word = function (num = null) {
+    var _value = null;
+    //void principal
+    let data = NumeroALetras(num).trim();
+    _value = data;
+    //chain voids
+    return {
 
-       
-   },
-   isFemValue:function(){
-    if (_value=='UN')
-    _value= 'UNA';
-    
-    
-        return this; 
-   },
-    isCapitalize:function(){
-       
-        _value= capitalizeFirstLetter(_value);;
-        return this; 
-    },
-    value:function(){
-        return _value;
+        FemaleValue: function () {
+            if (_value == 'UN '+ getSingular())
+                _value = 'UNA ' + getSingular();
+            return this;
+        },
+        Capitalize: function () {
+
+            _value = capitalizeFirstLetter(_value);;
+            return this;
+        },
+        Config: {
+            _setSingular: function (singular) {
+                setSingular(singular);
+            },
+            _setPlural: function (plural) {
+                setPlural(plural);
+            },
+        },
+        toString: function () { //resulted 
+
+            return _value;
+        }
+
+
     }
-
-  
-    
 }
+
+
+
 
 function capitalizeFirstLetter(string) {
     string = string.toLowerCase();
@@ -39,12 +53,3 @@ function capitalizeFirstLetter(string) {
 }
 
 export default numero_to_word;
-
-
-
-
-
-
-
-
-
