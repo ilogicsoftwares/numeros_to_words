@@ -2,23 +2,33 @@ import {NumeroALetras} from './numero_to_word/index.js';
 
 //craate module with static class named numero_to_word with export default NumeroALetras
 
+var _value=null;
 
 
 let numero_to_word={
-    femValue:true,
-    capitalize:false,
-    toWords:function(num){
+      toWords:function(num){
         let data = NumeroALetras(num).trim();
-        
+        _value=data;
+        return this; 
 
-        if (this.femValue===true && data=='UN')
-        data= 'UNA';
+       
+   },
+   isFemValue:function(){
+    if (_value=='UN')
+    _value= 'UNA';
+    
+    
+        return this; 
+   },
+    isCapitalize:function(){
+       
+        _value= capitalizeFirstLetter(_value);;
+        return this; 
+    },
+    value:function(){
+        return _value;
+    }
 
-        if (this.capitalize===true)
-        data= capitalizeFirstLetter(data);
-
-        return data;
-   }
   
     
 }
