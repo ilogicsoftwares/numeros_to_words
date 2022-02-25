@@ -37,7 +37,7 @@ var numero_to_word = function (num = null) {
         },
         toString: function () { //resulted 
 
-            return _value;
+            return Sanitizer(_value);
         }
 
 
@@ -45,6 +45,9 @@ var numero_to_word = function (num = null) {
 }
 
 
+function Sanitizer(value) {
+    return value.replace('  ', ' ');
+}
 
 
 function capitalizeFirstLetter(string) {
