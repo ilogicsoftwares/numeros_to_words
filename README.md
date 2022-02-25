@@ -53,12 +53,14 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## Created By
-Richard Jesus Aguirre Perez
+
 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Created By
+Richard Jesus Aguirre Perez.
 
 ## Créditos:
 Implementación basada en NumeroALetra.js
